@@ -1,0 +1,53 @@
+<!-- <p>home works!</p> -->
+<div class="border w-3/4 m-auto my-10 text-center bg-slate-100 p-10">
+    <div class="my-10">
+        <h1 class="text-blue-500 border-b-2 border-blue-200">USO DE PIPES</h1>
+    </div>
+    <div>
+        <label class="mr-3" for="">Valor: </label>
+        <input class="border-4 rounded-lg text-center border-blue-200" type="text" 
+         [(ngModel)]="valor">
+    </div>
+    <div class="mt-4">
+        <label class="mr-3" for="">Resultado:</label><span>{{valor | uppercase}}</span>
+    </div>
+</div>
+
+<div class="border w-3/4 m-auto my-10 text-center bg-slate-100 p-10">
+    <div class="my-10">
+        <h1 class="text-blue-500 border-b-2 border-blue-200">CURRENCY PIPES</h1>
+    </div>
+    <div>
+        <label class="mr-3" for="">Valor: </label>
+        <input class="border-4 rounded-lg text-center border-blue-200" type="text" 
+         [(ngModel)]="valor2">
+    </div>
+    <div class="mt-4">
+        <select class="w-3/4" name="" id="tipoMoneda">
+            <option value="" selected>-Selecciona el tipo de moneda-</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+        <button (click)="cambiar()">cambiar</button>
+    </div>
+    <div class="mt-4">
+        <label class="mr-3" for="">Resultado:</label>
+        <span>{{valor2 | currency: tipoMoneda}}</span>
+        {{tipoMoneda}}
+    </div>
+</div>
+
+<!-- actividad asincrona -->
+<div class="border w-3/4 m-auto my-10 text-center bg-slate-100 p-10">
+    <div class="my-10">
+        <h1 class="text-blue-500 border-b-2 border-blue-200">ACTIVIDAD ASINCRONA SESION 13</h1>
+    </div>
+    <div class="my-10">
+        <h1 class="text-blue-500 border-b-2 border-blue-200">JSONPIPE</h1>
+    </div>
+    <div class="mt-4">
+        <label class="mr-3" for="">Resultado:</label>
+        <span>{{dato | json}}</span>
+        
+    </div>
+</div>
